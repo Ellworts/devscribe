@@ -29,34 +29,48 @@
   width: 100%;
 }
 .repoInput {
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-family: var(--body-text-font-family);
+  font-size: var(--body-text-font-size);
   padding: 0 2rem;
   width: 60%;
-  background-color: rgba(171, 126, 168, 0.4);
+  background-color: var(--bg-secondary);
   border-radius: 8px;
   border: 1px solid transparent;
   height: 60px;
-  color: #ffdbfd;
+  color: var(--primary-color);
   box-sizing: border-box;
   line-height: 60px;
   transition: border-color 0.3s ease, background-color 0.3s ease;
 
   &::placeholder {
     transform: translateY(5%);
-    font-size: 18px;
-    color: #ffdbfd;
+    font-size: var(--body-text-font-size);
+    color: var(--primary-color);
     opacity: 0.7;
   }
 
   &:hover {
-    border-color: #ffdbfd;
+    border-color: var(--primary-color);
   }
 
   &:focus {
     outline: none;
-    border-color: #ffdbfd;
+    border-color: var(--primary-color);
   }
+}
+
+.inputWrapper::after {
+  content: "";
+  position: relative;
+  left: -3rem;
+  top: 17px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  background-image: url("../../assets/icons/chevron-right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .cardsFlexbox {
@@ -66,7 +80,7 @@
   .card {
     border-radius: 8px;
     width: 100%;
-    background-color: rgba(146, 55, 140, 0.25);
+    background-color: var(--bg-primary);
     backdrop-filter: blur(8px);
     padding: 2rem;
     gap: 1rem;
