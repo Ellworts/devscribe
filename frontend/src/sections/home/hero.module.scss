@@ -1,0 +1,104 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-image: url("../../assets/images/hero-abstract-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  gap: 120px;
+  padding: 80px 0;
+}
+
+.heroContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.heroHeading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.inputWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.repoInput {
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  padding: 0 2rem;
+  width: 60%;
+  background-color: rgba(171, 126, 168, 0.4);
+  border-radius: 8px;
+  border: 1px solid transparent;
+  height: 60px;
+  color: #ffdbfd;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+
+  &::placeholder {
+    transform: translateY(5%);
+    font-size: 18px;
+    color: #ffdbfd;
+    opacity: 0.7;
+  }
+
+  &:hover {
+    border-color: #ffdbfd;
+  }
+
+  &:focus {
+    outline: none;
+    border-color: #ffdbfd;
+  }
+}
+
+.cardsFlexbox {
+  display: flex;
+  gap: 2rem;
+
+  .card {
+    border-radius: 8px;
+    width: 100%;
+    background-color: rgba(146, 55, 140, 0.25);
+    backdrop-filter: blur(8px);
+    padding: 2rem;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+
+    .cardHeading {
+      display: flex;
+      align-items: center;
+      gap: 1.3rem;
+
+      h3 {
+        transform: translateY(10%);
+      }
+    }
+
+    .cardIcon {
+      width: 42px;
+      height: 42px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-position: center;
+
+      &[data-icon="robot"] {
+        background-image: url("../../assets/icons/robot.svg");
+      }
+      &[data-icon="code"] {
+        background-image: url("../../assets/icons/code.svg");
+      }
+      &[data-icon="file-alt"] {
+        background-image: url("../../assets/icons/file-alt.svg");
+      }
+    }
+  }
+}
